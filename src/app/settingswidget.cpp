@@ -2,6 +2,7 @@
 #include "ui_settingswidget.h"
 
 #include "settingsmodel.h"
+#include <QAction>
 
 using namespace Andromeda;
 
@@ -29,9 +30,9 @@ SettingsWidget::SettingsWidget(QWidget *parent) :
     m_closeAction->setShortcutContext(Qt::WindowShortcut);
     addAction(m_closeAction);
 
-    connect(ui->removeButton, SIGNAL(clicked()), SLOT(remove()));
-    connect(ui->refreshButton, SIGNAL(clicked()), SLOT(refresh()));
-    connect(m_closeAction, SIGNAL(triggered()), SLOT(close()));
+    connect(ui->removeButton, SIGNAL(clicked()),this, SLOT(remove()));
+    connect(ui->refreshButton, SIGNAL(clicked()), this, SLOT(refresh()));
+    connect(m_closeAction, SIGNAL(triggered()),this, SLOT(close()));
 }
 
 /*!

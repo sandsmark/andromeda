@@ -11,6 +11,6 @@ Product {
     Group {
         fileTagsFilter: product.type
         qbs.install: true
-        qbs.installDir: install_data_path + "/translations"
+        qbs.installDir: project.install_data_path + "/translations"
     }
 }

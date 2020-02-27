@@ -68,7 +68,7 @@ Application {
         condition: qbs.targetOS.contains("osx")
         files: "Andromeda.icns"
         qbs.install: true
-        qbs.installDir: install_data_path
+        qbs.installDir: project.install_data_path
     }
     Group {
         name: "andromeda.rc"

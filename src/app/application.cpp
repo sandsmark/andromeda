@@ -108,7 +108,7 @@ static inline QString getDataLocationPath()
 void preloadLibraries()
 {
 #ifndef QT_WEBKIT_NOT_FOUND
-    QStringList schemes = QWebSecurityOrigin::localSchemes(); // preloading WebKit
+    //QStringList schemes = QWebSecurityOrigin::localSchemes(); // preloading WebKit
 #endif
 
     QMimeDatabase db;
